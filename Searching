@@ -1,0 +1,5 @@
+Windows:
+1. Command Line
+  where /r [drive] *keyword1 keyword2*
+  example usage: 
+  where /r c: *Week1 Incident*
