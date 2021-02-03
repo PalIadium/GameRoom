@@ -3,3 +3,11 @@ Windows:
   where /r [drive] *keyword1 keyword2*
   example usage: 
   where /r c: *Week1 Incident*
+
+
+Linux:
+1. locate vs find
+locate is faster but relies on a database that is updated hours or days in the past so its output can be outdated
+however because this database is old, locate can be used to find files that no longer exists
+
+find runs in real time, can do things to files it finds, can point at a subdirectory, has powerful expression syntax,
