@@ -57,13 +57,71 @@ Level 9 --> Level 10
 ls 
 cat data.txt
 strings data.txt | grep "=="
+[password: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk]
 
 Level 10 --> Level 11
+ls 
+cat data.txt
+base64 -d data.txt
+[password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR]
+
 Level 11 --> Level 12
+ls 
+cat data.txt
+CyberChef (rot13)
+[password: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu]
+
 Level 12 --> Level 13
+ls 
+cat data.txt
+pwd
+mkdir /tmp/try1 && cd /tmp/try1
+cp /home/bandit12/data.txt .
+xxd -r data.txt > data 
+rm data.txt
+file data 
+mv data data.gz && ls
+gzip -d data.gz && ls
+file data 
+mv data data.bz
+bzip2 -d data.bz && ls
+file data 
+mv data data.gz
+gzip -d data.gz
+file data
+mv data data.tar && ls
+tar -xf data.tar && ls
+rm data.tar && file data5.bin
+mv data5.bin data.tar
+tar -xf data.tar && ls
+rm data.tar && file file data6.bin 
+mv data6.bin data.bz && ls
+bzip -d data.bz && ls
+file data && ls
+mv data data.tar && ls
+tar -xf data.tar && ls
+rm data.tar && file data8.bin
+mv data8.bin data.gz && ls
+gzip -d data.gz && ls
+file data 
+cat data
+[password: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL]
+
 Level 13 --> Level 14
+ls
+cat sshkey.private
+[drop ssh private key into a file named ssh_key.txt; exit session]
+chmod 600 ssh_key.txt 
+ssh bandit14@bandit.labs.overthewire.org -p 2220 -i test.txt
+cat /etc/bandit_pass/bandit14
+[password: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e]
+
 Level 14 --> Level 15
+cat /etc/bandit_pass/bandit14 | nc localhost 30000
+[password: BfMYroe26WYalil77FoDi9qh59eK5xNr]
+
 Level 15 --> Level 16
+
 Level 16 --> Level 17
 Level 17 --> Level 18
 Level 18 --> Level 19
