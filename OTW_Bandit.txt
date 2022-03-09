@@ -112,7 +112,7 @@ ls
 cat sshkey.private
 [drop ssh private key into a file named ssh_key.txt; exit session]
 chmod 600 ssh_key.txt 
-ssh bandit14@bandit.labs.overthewire.org -p 2220 -i test.txt
+ssh bandit14@bandit.labs.overthewire.org -p 2220 -i ssh_key.txt
 cat /etc/bandit_pass/bandit14
 [password: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e]
 
@@ -121,11 +121,33 @@ cat /etc/bandit_pass/bandit14 | nc localhost 30000
 [password: BfMYroe26WYalil77FoDi9qh59eK5xNr]
 
 Level 15 --> Level 16
+echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect localhost:30001 -ign_eof
+[password: cluFn7wTiGryunymYOu4RcffSxQluehd]
 
 Level 16 --> Level 17
+nmap -p31000-32000 -A localhost
+echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -connect localhost:31790 -ign_eof
+[save ssh_key.txt and use it to log into next session]
+ssh ssh bandit17@bandit.labs.overthewire.org -p 2220 -i ssh_key.txt
+
 Level 17 --> Level 18
+diff passwords.old passwords.new
+[password: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd]
+
 Level 18 --> Level 19
+ssh bandit18@bandit.labs.overthewire.org -p 2220   
+[automatically logs you out as challenge]
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220  "cat ~/readme"
+[password: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x]
+
 Level 19 --> Level 20
+ls
+./bandit20-do
+./bandit20-do ls /etc/bandit_pass
+./bandit20-do cat /etc/bandit_pass/bandit20
+[password: GbKksEFF4yrVs6il55v6gwY5aVje5f0j]
+
 Level 20 --> Level 21
 Level 21 --> Level 22
 Level 22 --> Level 23
