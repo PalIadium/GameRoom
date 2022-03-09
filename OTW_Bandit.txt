@@ -53,8 +53,11 @@ ls
 sort data.txt | uniq -u
 [password: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR]
 
-
 Level 9 --> Level 10
+ls 
+cat data.txt
+strings data.txt | grep "=="
+
 Level 10 --> Level 11
 Level 11 --> Level 12
 Level 12 --> Level 13
