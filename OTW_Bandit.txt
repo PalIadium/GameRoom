@@ -44,7 +44,16 @@ find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
 [password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs]
 
 Level 7 --> Level 8
+ls 
+cat data.txt | grep millionth 
+[password: cvX2JJa4CFALtqS87jk27qwqGhBM9plV]
+
 Level 8 --> Level 9
+ls
+sort data.txt | uniq -u
+[password: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR]
+
+
 Level 9 --> Level 10
 Level 10 --> Level 11
 Level 11 --> Level 12
