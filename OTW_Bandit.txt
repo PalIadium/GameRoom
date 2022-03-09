@@ -40,8 +40,8 @@ cat maybehere07/.file2
 [password: DXjZPULLxYr17uwoI01bNLQbtFemEgo7]
 
 Level 6 --> Level 7
-
-
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+[password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs]
 
 Level 7 --> Level 8
 Level 8 --> Level 9
