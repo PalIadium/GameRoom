@@ -1,0 +1,10 @@
+Zone Transfer: a process where one computer (primary server) shares all its information 
+about a specific area of the internet (zone) to another computer (secondary server).
+
+To perform zone transfer on a target primary server (exampleServerA) to an internal server (exampleServerIntern)
+
+
+nslookup                  // starts nslookup tool, allows to interact with DNS servers
+server exampleServerA     // switch to the nameserver exampleSeverA
+set type=AXFR             // AXFR (authoritative transfer) for zone transfers
+ls -d exampleServerIntern // requests zone transfer for the exampleServerIntern zone
